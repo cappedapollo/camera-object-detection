@@ -6,7 +6,7 @@ const c1 = document.getElementById('c1');
 const ctx1 = c1.getContext('2d');
 var cameraAvailable = false;
 var aiEnabled = false;
-var fps = 16;
+var spf = 16;
 
 /* Setting up the constraint */
 var facingMode = "environment"; // Can be 'user' or 'environment' to access back or front camera (NEAT!)
@@ -49,7 +49,7 @@ function timerCallback() {
             ai();
         }
     }
-    setTimeout(timerCallback, fps);
+    setTimeout(timerCallback, spf);
 }
 
 function isReady() {
@@ -83,7 +83,7 @@ function toggleAi() {
 }
 
 function changeFps() {
-    fps = 1000 / document.getElementById("fps").value;
+    spf = 1000 / document.getElementById("fps").value;
 }
 
 function ai() {
